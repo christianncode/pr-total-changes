@@ -1,0 +1,24 @@
+{
+  "name": "@christianncode/pr-total-changes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianncode/pr-total-changes.git"
+  },
+  "author": "Christian DC",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/christianncode/pr-total-changes/issues"
+  },
+  "homepage": "https://github.com/christianncode/pr-total-changes#readme",
+  "description": "",
+  "dependencies": {
+    "@actions/github": "^6.0.0",
+    "@actions/core": "^1.10.0"
+  }
+}

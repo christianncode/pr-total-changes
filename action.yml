@@ -1,0 +1,14 @@
+name: PR total changes by christianncode
+description: Get the total number of changes in a pull request
+author: "Christian Díaz"
+inputs:
+  token:
+    description: "GitHub token with read access to the repository"
+    required: true
+    default: "${{ secrets.GITHUB_TOKEN }}"
+runs:
+  using: "node20"
+  main: "index.js"
+branding:
+  icon: "check-square"
+  color: "green"
