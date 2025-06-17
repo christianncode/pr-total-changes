@@ -14,16 +14,16 @@ Add the following step to your workflow:
 
 ```yaml
 - name: PR Total Changes
-  uses: christianncode/pr-total-changes@v1
+  uses: christianncode/pr-total-changes@v1.1
   with:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Inputs
 
-| Name  | Description                               | Required | Default                       |
-| ----- | ----------------------------------------- | -------- | ----------------------------- |
-| token | GitHub token with read access to the repo | true     | `${{ secrets.GITHUB_TOKEN }}` |
+| Name         | Description                               | Required | Default                       |
+| ------------ | ----------------------------------------- | -------- | ----------------------------- |
+| GITHUB_TOKEN | GitHub token with read access to the repo | true     | `${{ secrets.GITHUB_TOKEN }}` |
 
 ## Example Output
 
