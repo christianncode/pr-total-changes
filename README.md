@@ -1,4 +1,4 @@
-# PR Total Changes by christianncode
+# PR Total Changes
 
 Get a summary of the total number of changes (additions and deletions) in a pull request, and automatically comment on the PR with the results.
 
@@ -16,7 +16,7 @@ Add the following step to your workflow:
 - name: PR Total Changes
   uses: christianncode/pr-total-changes@v1
   with:
-    token: ${{ secrets.GITHUB_TOKEN }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Inputs
