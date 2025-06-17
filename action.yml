@@ -1,4 +1,4 @@
-name: PR total changes by christianncode
+name: PR total changes
 description: Get the total number of changes in a pull request
 author: "Christian Díaz"
 inputs:
