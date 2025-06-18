@@ -38,12 +38,12 @@ async function run() {
   | ${additionsLimitValue} | ${deletionsLimitValue} | ${totalLimit} |
 
   ${
-    additions > Number(additionsLimit)
+    additionsLimit && additions > Number(additionsLimit)
       ? `❌ **Too many additions! The PR exceeds the limit of ${additionsLimit} lines added.**`
       : "✅ **additions allowed.**"
   }
   ${
-    deletions > Number(deletionsLimit)
+    deletionsLimit && deletions > Number(deletionsLimit)
       ? `❌ **Too many deletions! The PR exceeds the limit of ${deletionsLimit} lines removed.**`
       : "✅ **deletions allowed.**"
   }
