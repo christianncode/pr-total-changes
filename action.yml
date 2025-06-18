@@ -6,6 +6,18 @@ inputs:
     description: "GitHub token with read access to the repository"
     required: true
     default: ""
+  ADDITIONS_LIMIT:
+    description: "Maximum number of additions allowed in the PR"
+    required: false
+    default: ""
+  DELETIONS_LIMIT:
+    description: "Maximum number of deletions allowed in the PR"
+    required: false
+    default: ""
+  TOTAL_LIMIT:
+    description: "Total number of changes to consider for the PR"
+    required: false
+    default: "500"
 runs:
   using: "node20"
   main: "index.js"

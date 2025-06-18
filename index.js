@@ -3,6 +3,11 @@ import * as core from "@actions/core";
 
 async function run() {
   const token = core.getInput("GITHUB_TOKEN");
+  const additionsLimit = core.getInput("ADDITIONS_LIMIT");
+  const deletionsLimit = core.getInput("DELETIONS_LIMIT");
+  const additionsLimitValue = additionsLimit || "not set";
+  const deletionsLimitValue = deletionsLimit || "not set";
+  const totalLimit = core.getInput("TOTAL_LIMIT");
   const octokit = github.getOctokit(token);
   const context = github.context;
   const pullRequest = context.payload.pull_request;
@@ -27,9 +32,24 @@ async function run() {
   |-------------|---------------|---------------|
   | ${additions} | ${deletions} | ${totalChanges} |
 
+  ### ➡️ Configurations (Inputs)                                                       
+  | Additions Limit | Deletions Limit | Total Limit |
+  |-------------|---------------|---------------|
+  | ${additionsLimitValue} | ${deletionsLimitValue} | ${totalLimit} |
+
   ${
-    totalChanges > 500
-      ? "❌ **Too many changes! The PR exceeds the limit of 500 lines.**"
+    additions > Number(additionsLimit)
+      ? `❌ **Too many additions! The PR exceeds the limit of ${additionsLimit} lines added.**`
+      : "✅ **additions allowed.**"
+  }
+  ${
+    deletions > Number(deletionsLimit)
+      ? `❌ **Too many deletions! The PR exceeds the limit of ${deletionsLimit} lines removed.**`
+      : "✅ **deletions allowed.**"
+  }
+  ${
+    totalChanges > Number(totalLimit)
+      ? `❌ **Too many changes! The PR exceeds the limit of ${totalLimit} lines.**`
       : "✅ **The PR is within the acceptable limit.**"
   }
   `;
