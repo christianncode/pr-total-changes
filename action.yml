@@ -2,19 +2,19 @@ name: PR total changes
 description: Get the total number of changes in a pull request
 author: "Christian Díaz"
 inputs:
-  GITHUB_TOKEN:
+  github_token:
     description: "GitHub token with read access to the repository"
     required: true
     default: ""
-  ADDITIONS_LIMIT:
+  additions_limit:
     description: "Maximum number of additions allowed in the PR"
     required: false
     default: ""
-  DELETIONS_LIMIT:
+  deletions_limit:
     description: "Maximum number of deletions allowed in the PR"
     required: false
     default: ""
-  TOTAL_LIMIT:
+  total_limit:
     description: "Total number of changes to consider for the PR"
     required: false
     default: "500"

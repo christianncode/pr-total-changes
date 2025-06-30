@@ -16,20 +16,20 @@ Add the following step to your workflow:
 - name: PR Total Changes
   uses: christianncode/pr-total-changes@v1.2
   with:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    # ADDITIONS_LIMIT: 1000
-    # DELETIONS_LIMIT: 1000
-    # TOTAL_LIMIT: 500
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    # additions_limit: 1000
+    # deletions_limit: 1000
+    # total_limit: 500
 ```
 
 ## Inputs
 
-| Name            | Description                                    | Required | Default                       |
-| --------------- | ---------------------------------------------- | -------- | ----------------------------- |
-| GITHUB_TOKEN    | GitHub token with read access to the repo      | true     | `${{ secrets.GITHUB_TOKEN }}` |
-| ADDITIONS_LIMIT | Maximum number of additions allowed in the PR  | false    |                               |
-| DELETIONS_LIMIT | Maximum number of deletions allowed in the PR  | false    |                               |
-| TOTAL_LIMIT     | Total number of changes to consider for the PR | false    | 500                           |
+| Name            | Description                                     | Required | Default |
+| --------------- | ----------------------------------------------- | -------- | ------- |
+| github_token    | GitHub token with read access to the repository | true     |         |
+| additions_limit | Maximum number of additions allowed in the PR   | false    |         |
+| deletions_limit | Maximum number of deletions allowed in the PR   | false    |         |
+| total_limit     | Total number of changes to consider for the PR  | false    | 500     |
 
 ## Example Output
 

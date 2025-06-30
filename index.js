@@ -2,12 +2,12 @@ import * as github from "@actions/github";
 import * as core from "@actions/core";
 
 async function run() {
-  const token = core.getInput("GITHUB_TOKEN");
-  const additionsLimit = core.getInput("ADDITIONS_LIMIT");
-  const deletionsLimit = core.getInput("DELETIONS_LIMIT");
+  const token = core.getInput("github_token");
+  const additionsLimit = core.getInput("additions_limit");
+  const deletionsLimit = core.getInput("deletions_limit");
   const additionsLimitValue = additionsLimit || "not set";
   const deletionsLimitValue = deletionsLimit || "not set";
-  const totalLimit = core.getInput("TOTAL_LIMIT");
+  const totalLimit = core.getInput("total_limit");
   const octokit = github.getOctokit(token);
   const context = github.context;
   const pullRequest = context.payload.pull_request;
