@@ -14,7 +14,7 @@ Add the following step to your workflow:
 
 ```yaml
 - name: PR Total Changes
-  uses: christianncode/pr-total-changes@v1.2
+  uses: christianncode/pr-total-changes@v1
   with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
     # additions_limit: 1000
