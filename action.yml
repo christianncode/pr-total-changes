@@ -20,7 +20,7 @@ inputs:
     default: "500"
 runs:
   using: "node20"
-  main: "index.js"
+  main: "dist/index.js"
 branding:
   icon: "check-square"
   color: "green"

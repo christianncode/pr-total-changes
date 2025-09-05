@@ -1,15 +1,16 @@
 {
   "name": "@christianncode/pr-total-changes",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/christianncode/pr-total-changes.git"
   },
-  "author": "Christian DC",
+  "author": "Christian Díaz Carlos",
   "license": "MIT",
   "type": "module",
   "bugs": {
@@ -18,7 +19,10 @@
   "homepage": "https://github.com/christianncode/pr-total-changes#readme",
   "description": "",
   "dependencies": {
-    "@actions/github": "^6.0.0",
-    "@actions/core": "^1.10.0"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^6.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
   }
 }
